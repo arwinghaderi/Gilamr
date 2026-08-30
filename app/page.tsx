@@ -25,10 +25,16 @@ export default async function Home() {
           style={{
             background: "#C5D8FF",
             filter: "blur(210px)",
-            maskImage:
-              "linear-gradient(to bottom, black 60%, transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, black 60%, transparent 100%)",
+            maskImage: `
+      linear-gradient(to bottom, black 60%, transparent 100%),
+      linear-gradient(to right, black 0%, transparent 50%, black 100%)
+    `,
+            maskComposite: "intersect",
+            WebkitMaskImage: `
+      linear-gradient(to bottom, black 60%, transparent 100%),
+      linear-gradient(to right, black 0%, transparent 50%, black 100%)
+    `,
+            WebkitMaskComposite: "intersect",
           }}
         />
 

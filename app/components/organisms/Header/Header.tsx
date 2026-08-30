@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="relative w-full z-50">
-      <div className="container-custom py-3 sm:pt-10">
+      <div className="container-custom ">
         <div
           className="
             flex items-center justify-between
@@ -147,3 +147,4 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+

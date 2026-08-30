@@ -17,9 +17,9 @@ export const Logo: React.FC<LogoProps> = ({
       container: "w-20 h-10 sm:w-24 sm:h-12",
     },
     md: {
-      width: 120,
-      height: 60,
-      container: "w-30 h-15 sm:w-36 sm:h-18 md:w-40 md:h-20",
+      width: 169,
+      height: 53,
+      container: "w-30 h-15 sm:w-36 sm:h-18 md:w-40 md:h-13",
     },
     lg: {
       width: 180,
@@ -36,8 +36,8 @@ export const Logo: React.FC<LogoProps> = ({
         src={src}
         alt={alt}
         fill
-        className="object-contain"
-        sizes="(max-width: 640px) 80px, (max-width: 768px) 120px, 180px"
+        className="  object-contain"
+        sizes=" (max-width: 640px) 53px, (max-width: 768px) 120px, 180px"
         quality={100}
         priority
         unoptimized

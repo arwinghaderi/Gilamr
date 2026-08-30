@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f8f8;
+  --foreground: #1a1a1a;
+  --container-padding: 16px;
+
+  --navbar-bg: #FCFDFD;
+  --navbar-border: #EEF3F7;
+  --navbar-shadow: #FFFFFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-title: #1a1a1a;
+  --color-description: #4c4c4d;
+  --color-primary-bg: #f5f8f8;
+  --color-button-text: #ffffff;
+  --color-navbar-bg: var(--navbar-bg);
+  --color-navbar-border: var(--navbar-border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ========== انیمیشن‌های منوی موبایل (کشویی عمودی) ========== */
+@keyframes slideDownDrawer {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideUpDrawer {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+}
+
+/* یوتیلیتی‌های انیمیشن کشویی */
+@utility drawer-open {
+  animation: slideDownDrawer 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@utility drawer-close {
+  animation: slideUpDrawer 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@utility burger-spin {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+}
+
+@utility burger-open {
+  transform: rotate(180deg) scale(0.85);
+}
+
+@utility burger-close {
+  transform: rotate(0deg) scale(1);
+}
+
+@utility container-custom {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+
+  @media (width >=640px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (width >=768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (width >=1024px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @media (width >=1280px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @media (width >=1440px) {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-abar), tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
 }

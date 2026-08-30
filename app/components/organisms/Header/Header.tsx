@@ -52,7 +52,6 @@ export const Header: React.FC = () => {
   return (
     <header className="relative w-full z-50">
       <div className="container-custom py-3 sm:pt-10">
-        {/* ===== نوبار اصلی ===== */}
         <div
           className="
             flex items-center justify-between
@@ -66,12 +65,10 @@ export const Header: React.FC = () => {
             hover:shadow-[0px_0px_0px_8px_#FFFFFF]
           "
         >
-          {/* لوگو */}
           <div className="flex-shrink-0">
             <Logo size="md" />
           </div>
 
-          {/* دکمه همبرگر با انیمیشن چرخش */}
           <button
             onClick={toggleMenu}
             className="lg:hidden relative p-2 rounded-lg hover:bg-gray-100/70 transition-colors duration-200"
@@ -86,8 +83,7 @@ export const Header: React.FC = () => {
             </div>
           </button>
 
-          {/* منوی دسکتاپ */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden lg:flex items-center gap-6 md:gap-4 xl:gap-10">
             {navItems.map((item) => (
               <NavItem
                 key={item.href}
@@ -98,31 +94,30 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* دکمه ورود/ثبت‌نام */}
           <div className="hidden lg:block">
-            
-            <Button size="sm" rightIconName="user" variant="primary">
-              {" "}
+            <Button size="sm" leftIconName="user" variant="primary">
               ورود یا ثبت‌نام
             </Button>
           </div>
         </div>
 
-        {/* ===== منوی موبایل با انیمیشن کشویی ارتفاع ===== */}
+        {/* ===== منوی موبایل با اسکرول ===== */}
         <div
           ref={menuRef}
           className="lg:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
           style={{
-            maxHeight: isMenuOpen ? "500px" : "0px",
+            maxHeight: isMenuOpen ? "calc(100vh - 180px)" : "0px",
             opacity: isMenuOpen ? 1 : 0,
           }}
         >
           <div
             className={`
-              mt-3 rounded-2xl 
-              bg-white/95 backdrop-blur-sm 
-              border border-navbar-border 
+              mt-3 rounded-2xl
+              bg-white/95 backdrop-blur-sm
+              border border-navbar-border
               shadow-xl
+              overflow-y-auto   
+              py-4           
               ${isMenuOpen ? "drawer-open" : "drawer-close"}
             `}
           >
@@ -136,7 +131,13 @@ export const Header: React.FC = () => {
                   className="text-base w-full text-center py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 />
               ))}
-              <Button size="sm" fullWidth className="mt-3">
+              <Button
+                size="sm"
+                fullWidth
+                className="mt-3 mb-2"
+                leftIconName="user"
+                variant="primary"
+              >
                 ورود یا ثبت‌نام
               </Button>
             </nav>

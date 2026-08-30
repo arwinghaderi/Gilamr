@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center gap-x-[10px] font-extrabold leading-9 text-base transition-all duration-200 ease-in-out cursor-pointer border-none outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#02ADF7]";
+    "inline-flex items-center justify-center gap-x-[10px] font-extrabold !leading-9 text-sm transition-all duration-200 ease-in-out cursor-pointer border-none outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#02ADF7]";
 
   const gradientClasses = `
     bg-[radial-gradient(27.92%_100%_at_50%_0%,rgba(255,255,255,0.24)_0%,rgba(255,255,255,0)_100%)]
@@ -73,7 +73,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={finalClasses} {...props}>
       {leftIcon && (
-        <span className="flex items-center justify-center">{leftIcon}</span>
+        <span className="  flex items-center justify-center">{leftIcon}</span>
       )}
       {children}
       {rightIcon && (

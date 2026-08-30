@@ -12,7 +12,7 @@ export const NavItem: React.FC<NavItemProps> = ({
     <Link
       href={href}
       className={`
-        relative text-base font-semibold   !leading-9  transition-colors duration-200
+        relative  text-sm xl:text-base font-semibold   leading-9  transition-colors duration-200
         hover:text-[#02ADF7]
         ${isActive ? "text-[#02ADF7]" : " text-title "}
         after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 

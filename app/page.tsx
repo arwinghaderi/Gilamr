@@ -1,5 +1,12 @@
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
+import { AboutSection } from "./components/organisms/AboutSection";
+import { RoomsSection } from "@/components/organisms/RoomsSection";
+import { ServicesSection } from "@/components/organisms/ServicesSection";
+import { VideoSection } from "@/components/organisms/VideoSection";
+
+
+
 
 // ===== گرفتن دیتا از API سمت سرور (SSR) =====
 async function getHeroData() {
@@ -13,7 +20,62 @@ async function getHeroData() {
     buttonText: "مهمان گلیمار شو",
   };
 }
- 
+
+const servicesData = [
+  {
+    id: "1",
+    title: "پرده نگری",
+    imageSrc: "/images/service2.jpg",
+  },
+  {
+    id: "2",
+    title: "قایق سواری",
+    imageSrc: "/images/service1.jpg",
+    isLarge: true,
+  },
+  {
+    id: "3",
+    title: "شتر سواری",
+    imageSrc: "/images/service3.jpg",
+  },
+  {
+    id: "4",
+    title: "دوچرخه سواری",
+    imageSrc: "/images/Hero.png",
+  },
+];
+
+const roomsData = [
+  {
+    id: "1",
+    title: "خانه‌ی چوبی گلیمار",
+    description: "هر شب اقامت",
+    price: "۱۳۰٬۰۰۰ تومان",
+    imageSrc: "/images/Hero.png",
+  },
+  {
+    id: "2",
+    title: "خانه‌ی چوبی گلیمار",
+    description: "هر شب اقامت منازل",
+    price: "۱۳۰٬۰۰۰ تومان",
+    imageSrc: "/images/Hero.png",
+  },
+  {
+    id: "3",
+    title: "خانه‌ی چوبی گلیمار",
+    description: "هر شب اقامت",
+    price: "۱۳۰٬۰۰۰ تومان",
+    imageSrc: "/images/Hero.png",
+  },
+  {
+    id: "4",
+    title: "خانه‌ی چوبی کیلمار",
+    description: "هر شب اقامت",
+    price: "۱۳۰٬۰۰۰ تومان",
+    imageSrc: "/images/Hero.png",
+  },
+];
+
 export default async function Home() {
   const heroData = await getHeroData();
 
@@ -49,9 +111,32 @@ export default async function Home() {
           imageSrc="/images/Hero.png"
         />
       </section>
-
       {/* ===== سایر بخش‌ها (بدون بک‌گراند) ===== */}
-      <p className=" mt-20 ">Hajnalkndlkadnkal</p>
+      <AboutSection
+        subtitle="گلیمار"
+        title=" گیلمار؛ آرامش ناب در آغوش طبیعت گیلان"
+        description={`گیلمار با فضایی آرام، سرسبز و چشم‌اندازی زیبا از دریاچه‌ها، میزبان لحظاتی دلنشین و به‌یادماندنی برای شماست. طبیعت بکر تالابی، حضور پرندگان بومی و مهاجر، نزدیکی به جاذبه‌های گردشگری گیلان، مسیر دسترسی مناسب و انواع تفریحات و گشت‌های گیلان‌گردی، این اقامتگاه را به مقصدی متفاوت برای سفر تبدیل کرده است.`}
+        buttonText="اقامت در گلیمار"
+        imageSrc="/images/About-section.png"
+      />{" "}
+      <RoomsSection
+        title="انواع اتاق‌های اقامتگاه گلیمار"
+        description="اتاق‌های گلیمار با فضایی دنج و امکانات مناسب، برای اقامتی آرام در دل طبیعت آماده شده‌اند."
+        rooms={roomsData}
+      />
+      <ServicesSection
+        title="خدمات رفاهی گلیمار برای اقامتی دلنشین"
+        description="در گلیمار آرامش طبیعت را در کنار خدمات رفاهی کامل تجربه می‌کنید؛ فضایی دنج و صمیمی که برای ساختن لحظاتی آرام، خوش و به یادماندنی آماده شده است."
+        services={servicesData}
+      />
+      <VideoSection
+        title="تور ویدیویی اقامتگاه گلیمار"
+        description="در این تور ویدیویی، گوشه‌ای از آرامش، طبیعت بکر و فضای گرم اقامتگاه گلیمار را از نزدیک تماشا کنید و پیش از سفر حال‌وهای دلنشین آن را تجربه کنید."
+        buttonText="اقامت در گلیمار"
+        videoSrc="/video/sample.mp4"
+        videoPoster="/images/Forest.png"
+      />
+      <p className="mt-20">Hajnalkndlkadnkal</p>
     </div>
   );
 }

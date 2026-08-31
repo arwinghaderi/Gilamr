@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({
               className="min-w-[150px] sm:min-w-[174px] lg:min-w-[191px] pl-2  !py-4 sm:pl-3 lg:pl-1.5 justify-center sm:justify-between text-xs sm:text-sm  xl:text-base font-semibold sm:font-bold lg:font-extrabold"
               rightIconName="arrowBack"
               size="sm"
-              rightIconClassName="w-6.5 h-6.5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#F7F8F8] shadow-[inset_-4px_-4px_6px_rgba(186,200,209,0.3)] rounded-full flex items-center justify-center"
+              rightIconClassName="w-6.5 h-6.5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 icon-arrow-gradient rounded-full flex items-center justify-center"
             >
               {buttonText}
             </Button>

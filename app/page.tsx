@@ -4,9 +4,7 @@ import { AboutSection } from "./components/organisms/AboutSection";
 import { RoomsSection } from "@/components/organisms/RoomsSection";
 import { ServicesSection } from "@/components/organisms/ServicesSection";
 import { VideoSection } from "@/components/organisms/VideoSection";
-
-
-
+import { TestimonialsSection } from "@/components/organisms/TestimonialsSection";
 
 // ===== گرفتن دیتا از API سمت سرور (SSR) =====
 async function getHeroData() {
@@ -135,6 +133,30 @@ export default async function Home() {
         buttonText="اقامت در گلیمار"
         videoSrc="/video/sample.mp4"
         videoPoster="/images/Forest.png"
+      />
+      <TestimonialsSection
+        title="نظرات مهمانان گلیمار"
+        description="آنچه مسافران درباره‌ی تجربه‌ی اقامت خود در گلیمار می‌گویند."
+        testimonials={[
+          {
+            id: "1",
+            comment: "اقامت فوق‌العاده‌ای بود. طبیعت بکر و خدمات عالی.",
+            name: "احمد رضایی",
+            role: "مهمان",
+          },
+          {
+            id: "2",
+            comment: "محیطی آرام و دلنشین، حتماً دوباره می‌آیم.",
+            name: "سارا محمدی",
+            role: "مهمان",
+          },
+          {
+            id: "3",
+            comment: "بهترین تجربه‌ی اقامتی که تا حالا داشتم.",
+            name: "علی کریمی",
+            role: "مهمان",
+          },
+        ]}
       />
       <p className="mt-20">Hajnalkndlkadnkal</p>
     </div>

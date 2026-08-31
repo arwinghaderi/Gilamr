@@ -146,3 +146,19 @@ body {
     0px 4px 6px 0px #0000004D,
     -4px -4px 6px 0px #BAC8D14D inset;
 }
+
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  background: rgba(105, 118, 135, 0.3) !important;
+  border-radius: 6px !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: linear-gradient(229.52deg, #02ADF7 -18.98%, #26E05A 121.29%) !important;
+   width: 6px !important;
+  height: 6px !important;
+  border-radius: 8000px !important;
+}

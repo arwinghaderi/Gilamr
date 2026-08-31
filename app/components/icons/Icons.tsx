@@ -79,6 +79,48 @@ export const ICONS = {
       </defs>
     </svg>
   ),
+  quote: (
+    <svg
+      width="28"
+      height="21"
+      viewBox="0 0 28 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.53363 5.96046e-08C2.92518 5.96046e-08 0 2.926 0 6.5357C0 10.1441 2.92518 13.0701 6.53363 13.0701C6.53363 13.0701 6.50202 15.4978 4.52977 18.9919C4.31069 19.692 4.70121 20.4376 5.40176 20.6554C5.89881 20.8118 6.42184 20.6598 6.75959 20.306C11.2946 15.3459 13.0697 9.50808 13.0697 6.5357C13.0697 2.926 10.1446 5.96046e-08 6.53363 5.96046e-08Z"
+        fill="url(#paint0_linear_14_580)"
+      />
+      <path
+        d="M21.4638 0C17.8554 0 14.9302 2.92606 14.9302 6.5357C14.9302 10.1441 17.8554 13.0701 21.4638 13.0701C21.4638 13.0701 21.4322 15.4978 19.4599 18.9919C19.2409 19.692 19.6314 20.4376 20.3319 20.6554C20.829 20.8118 21.352 20.6598 21.6897 20.306C26.2247 15.3459 27.9999 9.50808 27.9999 6.5357C27.9999 2.926 25.0748 0 21.4638 0Z"
+        fill="url(#paint1_linear_14_580)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_14_580"
+          x1="14.2366"
+          y1="-6.37105"
+          x2="-12.1058"
+          y2="7.81432"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#02ADF7" />
+          <stop offset="1" stopColor="#26E05A" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_14_580"
+          x1="29.1669"
+          y1="-6.37105"
+          x2="2.82437"
+          y2="7.81441"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#02ADF7" />
+          <stop offset="1" stopColor="#26E05A" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
 } as const;
 
 export type IconName = keyof typeof ICONS;

@@ -46,7 +46,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       <img
         src="/images/Astrolabe.png"
         alt="Astrolabe"
-        className="absolute hidden  max-w-[134px] max-h-[139px]  lg:block lg:visible left-1/2 -translate-x-1/2 bottom-0 pointer-events-none select-none  -rotate-45 "
+        className="absolute hidden  max-w-[134px] max-h-[139px]  lg:block lg:visible left-1/2 -translate-x-1/2 bottom-0 pointer-events-none select-none  -rotate-33 "
       />
 
       <div className="container-custom relative z-10">

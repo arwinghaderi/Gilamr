@@ -18,7 +18,7 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
       <img
         src="/images/VectorCheckered.png"
         alt=""
-        className="absolute left-[-65.6px] bottom-[341.2px] w-[800.4px] h-[393.8px] pointer-events-none select-none "
+        className="absolute left-[-65.6px] bottom-[200.2px] w-[800.4px] h-[393.8px] pointer-events-none select-none "
       />
 
       <div className="container-custom relative z-10">

@@ -63,7 +63,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
             </div>
           </div>
 
-          <div className="order-2 space-y-4 md:space-y-5">
+          <div className="order-2 space-y-4 md:space-y-5 min-h-[700px] ">
             {faqs.map((faq) => (
               <AccordionItem
                 key={faq.id}

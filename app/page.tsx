@@ -9,6 +9,8 @@ import { ArticlesSection } from "@/components/organisms/ArticlesSection";
 import { FAQSection } from "@/components/organisms/FAQSection";
 import { Footer } from "@/components/organisms/Footer";
 import { ICONS } from "@/components/icons/Icons";
+import { RulesSection } from "@/components/organisms/RulesSection";
+
 // import { Instagram, Telegram, Facebook } from "lucide-react";
 
 // ===== گرفتن دیتا از API سمت سرور (SSR) =====
@@ -24,6 +26,29 @@ async function getHeroData() {
   };
 }
 
+const rulesData = [
+  {
+    id: "1",
+    title: "حفظ طبیعت و محیط زیست",
+    description:
+      "گلیمار در دل طبیعت قرار دارد؛ لطفاً در حفظ محیط‌زیست، فضای سبز و منابع طبیعی همراه با باشید.",
+    imageSrc: "/images/rule1.png",
+  },
+  {
+    id: "2",
+    title: "حفظ آرامش اقامتگاه",
+    description:
+      "برای حفظ فضای آرام و دلنشین گلیمار، لطفاً از ایجاد سروصدای زیاد به‌ویژه در ساعات شب خودداری کنید.",
+    imageSrc: "/images/rule2.png",
+  },
+  {
+    id: "3",
+    title: "مراقبت از وسایل اقامتگاه",
+    description:
+      "مهمانان عزیز مسئول نگهداری از تجهیزات و وسایل داخل اقامتگاه در طول مدت اقامت هستند.",
+    imageSrc: "/images/rule1.png",
+  },
+];
 const footerData = {
   description: `اقامتگاه بوم‌گردی گیلمار، بزرگ‌ترین مجموعه اکولوژ شمال کشور با امکانات رفاهی و تفریحی متنوع، در فضایی منحصربه‌فرد و با مجوز رسمی میراث فرهنگی گیلان فعالیت می‌کند.`,
   exploreLinks: [
@@ -223,6 +248,11 @@ export default async function Home() {
         buttonText="اقامت در گلیمار"
         imageSrc="/images/About-section.png"
       />{" "}
+      <RulesSection
+        title="هم‌راهی برای حفظ آرامش و طبیعت گلیمار"
+        description="برای حفظ آرامش، نظم و تجربه‌ای دلنشین برای همه مهمانان، لطفاً قوانین اقامتگاه گلیمار را پیش از رزرو مطالعه و رعایت فرمایید."
+        rules={rulesData}
+      />
       <RoomsSection
         title="انواع اتاق‌های اقامتگاه گلیمار"
         description="اتاق‌های گلیمار با فضایی دنج و امکانات مناسب، برای اقامتی آرام در دل طبیعت آماده شده‌اند."

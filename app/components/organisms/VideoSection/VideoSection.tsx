@@ -61,7 +61,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
             />
             </div>
 
-            <h2 className="text-2xl md:text-3xl lg:text-[32px] leading-[100%] tracking-[-1.4px] font-extrabold text-title max-w-[400px] mx-auto lg:mx-0">
+            <h2 className="text-base md:text-3xl lg:text-[32px] leading-[100%] tracking-[-1.4px] font-extrabold text-title max-w-[400px] mx-auto lg:mx-0">
               {title}
             </h2>
             <p className="mt-3 sm:mt-4 text-xs md:text-sm text-description leading-8 max-w-[502px] mx-auto lg:mx-0 font-semibold">

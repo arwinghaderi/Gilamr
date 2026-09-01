@@ -50,7 +50,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 className="pointer-events-none select-none w-full max-w-[84px] h-auto md:w-[84px] md:h-[52px]  mb-5 "
               />
             </div>
-            <h2 className="text-xl text-center w-full  xl:text-right  md:text-2xl lg:text-[32px] leading-[100%] tracking-[-1.4px] font-extrabold text-title xl:max-w-[550px]">
+            <h2 className="text-base text-center w-full  xl:text-right  md:text-2xl lg:text-[32px] leading-[100%] tracking-[-1.4px] font-extrabold text-title xl:max-w-[550px]">
               {title}
             </h2>
             <p className="mt-3 sm:mt-4 text-xs md:text-sm text-description text-center xl:text-right leading-8 max-w-2xl mx-auto xl:mx-0">

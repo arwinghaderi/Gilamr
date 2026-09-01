@@ -40,7 +40,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               className="pointer-events-none select-none w-12 sm:w-16 md:w-[84px] h-auto md:h-[52px] mb-4 md:mb-5"
             />
           </div>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[32px] font-extrabold text-title tracking-[-1.4px] leading-[100%]">
+          <h2 className="text-base sm:text-xl md:text-2xl lg:text-[32px] font-extrabold text-title tracking-[-1.4px] leading-[100%]">
             {title}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-description font-medium max-w-[550px] mx-auto leading-8 px-4">

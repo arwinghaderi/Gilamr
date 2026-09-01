@@ -50,17 +50,16 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       />
 
       <div className="container-custom relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] items-center">
+          {" "}
           <div className="text-center lg:text-right order-1">
             <div className=" flex items-center lg:justify-start justify-center ">
-
-            <img
-              src="/images/Icon Container.png"
-              alt="Icon Container"
-              className="pointer-events-none select-none w-full max-w-[84px] h-auto md:w-[84px] md:h-[52px]  mb-5 "
-            />
+              <img
+                src="/images/Icon Container.png"
+                alt="Icon Container"
+                className="pointer-events-none select-none w-full max-w-[84px] h-auto md:w-[84px] md:h-[52px]  mb-5 "
+              />
             </div>
-
             <h2 className="text-base md:text-3xl lg:text-[32px] leading-[100%] tracking-[-1.4px] font-extrabold text-title max-w-[400px] mx-auto lg:mx-0">
               {title}
             </h2>
@@ -80,12 +79,8 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
               </div>
             </div>
           </div>
-
-          {/* ===== سمت چپ: ویدیو که دقیقاً به شکل وکتور (PNG) ماسک می‌شود ===== */}
-          {/* عرض بیشتر و ارتفاع ۶۹۰ پیکسل */}
-          <div className="relative order-2 flex justify-center">
-            <div className="relative w-full max-w-[800px] h-[690px]">
-              {/* ویدیو: بدون کنترل‌های پیش‌فرض */}
+          <div className="relative mt-3 sm:mt-0 order-2 flex justify-center">
+            <div className="relative w-full max-w-[900px] h-[650px]">
               <video
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -103,9 +98,8 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
                 onClick={handlePlay}
               />
 
-              {/* دکمه پلی کاستوم - فقط وقتی نمایش داده می‌شود که پخش نشده */}
               {!isPlaying && (
-                <div className="absolute top-65 left-20 flex items-center justify-center z-20 pointer-events-none">
+                <div className="absolute top-65 left-25 sm:left-35 flex items-center justify-center z-20 pointer-events-none">
                   <button
                     onClick={handlePlay}
                     className="w-[120px] h-[120px] rounded-full bg-white/40 backdrop-blur-md flex items-center justify-center animate-pulse hover:scale-110 transition-transform duration-300 cursor-pointer pointer-events-auto"

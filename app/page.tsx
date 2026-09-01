@@ -10,6 +10,8 @@ import { FAQSection } from "@/components/organisms/FAQSection";
 import { Footer } from "@/components/organisms/Footer";
 import { ICONS } from "@/components/icons/Icons";
 import { RulesSection } from "@/components/organisms/RulesSection";
+import { PackageSection } from "@/components/organisms/PackageSection";
+
 
 // import { Instagram, Telegram, Facebook } from "lucide-react";
 
@@ -206,6 +208,29 @@ const faqsData = [
   },
 ];
 
+const featuresData = [
+  {
+    id: "4",
+    title: "1 شب اقامت",
+    imageSrc: "/images/stay (1).png",
+  },
+  {
+    id: "1",
+    title: "قایق سواری",
+    imageSrc: "/images/Boat.png",
+  },
+  {
+    id: "2",
+    title: "تور جنگل نوردی",
+    imageSrc: "/images/forest (2).png",
+  },
+  {
+    id: "3",
+    title: "صبحانه",
+    imageSrc: "/images/breakfast.png",
+  },
+];
+
 export default async function Home() {
   const heroData = await getHeroData();
 
@@ -293,6 +318,21 @@ export default async function Home() {
             role: "مهمان",
           },
         ]}
+      />
+      <PackageSection
+        title={`پکیج‌های ویژه اقامت در گیلمار`}
+        description={`پکیج‌های ویژه ما ترکیبی از اقامت آرام، غذاهای محلی و تفریحات هیجان‌انگیز در دل طبیعت است.`}
+        subtitle="پکیج رمانتیک دو نفره"
+        subDescription={`شامل: ۱ شب اقامت + صبحانه + تور جنگل‌نوردی + قایق‌سواری`}
+        features={featuresData}
+        price="قیمت: ۲۳۰۰۰۰ تومان"
+        buttonText="همین حالا رزرو کن"
+        sliderImages={[
+          "/images/package3 2.png",
+          "/images/package3 2.png",
+          "/images/package3 2.png",
+        ]}
+        sliderTitle={`تجربه‌ی اقامتی اصیل در دل طبیعت شمال`}
       />
       <ArticlesSection
         title={`مجله و مقالات گیلمار؛ روایت سفر، طبیعت و آرامش`}

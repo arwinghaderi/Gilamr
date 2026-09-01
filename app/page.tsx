@@ -5,6 +5,8 @@ import { RoomsSection } from "@/components/organisms/RoomsSection";
 import { ServicesSection } from "@/components/organisms/ServicesSection";
 import { VideoSection } from "@/components/organisms/VideoSection";
 import { TestimonialsSection } from "@/components/organisms/TestimonialsSection";
+import { ArticlesSection } from "@/components/organisms/ArticlesSection";
+
 
 // ===== گرفتن دیتا از API سمت سرور (SSR) =====
 async function getHeroData() {
@@ -70,6 +72,30 @@ const roomsData = [
     title: "خانه‌ی چوبی کیلمار",
     description: "هر شب اقامت",
     price: "۱۳۰٬۰۰۰ تومان",
+    imageSrc: "/images/Hero.png",
+  },
+];
+
+const articlesData = [
+  {
+    id: "1",
+    title: "لورم ایپسوم متن ساختگی",
+    description:
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
+    imageSrc: "/images/Hero.png",
+  },
+  {
+    id: "2",
+    title: "لورم ایپسوم متن ساختگی",
+    description:
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
+    imageSrc: "/images/Hero.png",
+  },
+  {
+    id: "3",
+    title: "لورم ایپسوم متن ساختگی",
+    description:
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
     imageSrc: "/images/Hero.png",
   },
 ];
@@ -157,6 +183,11 @@ export default async function Home() {
             role: "مهمان",
           },
         ]}
+      />
+      <ArticlesSection
+        title={`مجله و مقالات گیلمار؛ روایت سفر، طبیعت و آرامش`}
+        description={`در مجله گیلمار، خواندنی‌هایی درباره سفر، طبیعت، فرهنگ محلی و تجربه اقامتی دلنشین را دنبال کنید.`}
+        articles={articlesData}
       />
       <p className="mt-20">Hajnalkndlkadnkal</p>
     </div>

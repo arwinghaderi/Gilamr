@@ -1,26 +1,20 @@
 import React from "react";
-import { RoomCard } from "@/components/molecules/RoomCard";
-import type { RoomCardProps } from "@/components/molecules/RoomCard";
+import { ArticleCard } from "@/components/molecules/ArticleCard";
+import { ArticleCardProps } from "@/components/molecules/ArticleCard";
 
-interface RoomsSectionProps {
+interface ArticlesSectionProps {
   title: string;
   description: string;
-  rooms: RoomCardProps[];
+  articles: ArticleCardProps[];
 }
 
-export const RoomsSection: React.FC<RoomsSectionProps> = ({
+export const ArticlesSection: React.FC<ArticlesSectionProps> = ({
   title,
   description,
-  rooms,
+  articles,
 }) => {
   return (
-    <section className="relative w-full overflow-hidden  py-12 md:py-16 lg:py-20">
-      <img
-        src="/images/VectorCheckered.png"
-        alt=""
-        className="absolute left-[-65.6px] bottom-[341.2px] w-[800.4px] h-[393.8px] pointer-events-none select-none "
-      />
-
+    <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20 ">
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 lg:mb-10">
           <div className=" flex items-center  justify-center ">
@@ -38,9 +32,9 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-">
-          {rooms.map((room) => (
-            <RoomCard key={room.id} {...room} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} {...article} />
           ))}
         </div>
       </div>

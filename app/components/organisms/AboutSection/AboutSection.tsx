@@ -20,7 +20,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
   imageAlt = "About image",
 }) => {
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
+    <section className="relative w-full overflow-hidden ">
       {/* وکتور پس‌زمینه */}
       <img
         src="/images/VectorCheckered.png"

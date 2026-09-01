@@ -127,7 +127,7 @@ const roomsData = [
     title: "خانه‌ی چوبی گلیمار",
     description: "هر شب اقامت منازل",
     price: "۱۳۰٬۰۰۰ تومان",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/Forest.png",
   },
   {
     id: "3",
@@ -264,6 +264,7 @@ export default async function Home() {
           description={heroData.description}
           buttonText={heroData.buttonText}
           imageSrc="/images/Hero.png"
+          imageSrcTop="/images/bg-top.png"
         />
       </section>
       <AboutSection
@@ -278,15 +279,15 @@ export default async function Home() {
         description="برای حفظ آرامش، نظم و تجربه‌ای دلنشین برای همه مهمانان، لطفاً قوانین اقامتگاه گلیمار را پیش از رزرو مطالعه و رعایت فرمایید."
         rules={rulesData}
       />
-      <RoomsSection
-        title="انواع اتاق‌های اقامتگاه گلیمار"
-        description="اتاق‌های گلیمار با فضایی دنج و امکانات مناسب، برای اقامتی آرام در دل طبیعت آماده شده‌اند."
-        rooms={roomsData}
-      />
       <ServicesSection
         title="خدمات رفاهی گلیمار برای اقامتی دلنشین"
         description="در گلیمار آرامش طبیعت را در کنار خدمات رفاهی کامل تجربه می‌کنید؛ فضایی دنج و صمیمی که برای ساختن لحظاتی آرام، خوش و به یادماندنی آماده شده است."
         services={servicesData}
+      />
+      <RoomsSection
+        title="انواع اتاق‌های اقامتگاه گلیمار"
+        description="اتاق‌های گلیمار با فضایی دنج و امکانات مناسب، برای اقامتی آرام در دل طبیعت آماده شده‌اند."
+        rooms={roomsData}
       />
       <VideoSection
         title="تور ویدیویی اقامتگاه گلیمار"

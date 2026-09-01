@@ -8,6 +8,7 @@ interface HeroProps {
   description: string;
   buttonText: string;
   imageSrc: string;
+  imageSrcTop: string;
   imageAlt?: string;
   reservationCount?: number;
   reservationImages?: string[];
@@ -20,6 +21,7 @@ export const Hero: React.FC<HeroProps> = ({
   description,
   buttonText,
   imageSrc,
+  imageSrcTop,
   imageAlt = "Hero image",
   reservationCount = 120,
   reservationImages = [
@@ -56,28 +58,44 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        {/* تصویر (اختیاری) */}
         {imageSrc && (
-          <div className="relative w-full aspect-auto mt-8 sm:mt-10 lg:mt-12">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              className="object-contain !relative"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              priority
+          <div className="relative w-full max-w-[1440px] max-h-[581px] mx-auto aspect-[3/2] mt-8 sm:mt-10 lg:mt-18">
+            <img
+              src={imageSrcTop}
+              className=" w-[91%]  top-[5%] lg:-top-[5%]  xl:-top-[13%] left-[3%] absolute z-10 "
+              alt="image"
             />
+            <div
+              className="absolute inset-0 w-full h-full max-h-[581px]"
+              style={{
+                WebkitMaskImage: "url('/images/Background.png')",
+                maskImage: "url('/images/Background.png')",
+                WebkitMaskSize: "100% 100%",
+                maskSize: "100% 100%",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+              }}
+            >
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw z-0"
+                priority
+              />
+            </div>
 
-            {/* ===== کارت رزرو موفق (گوشه‌ی پایین چپ) ===== */}
-            <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 left-2 sm:left-3 md:left-4 lg:-left-1">
+            <div className="absolute bottom-[30%] lg:bottom-[27%] xl:bottom-[21%]  -left-[1%] z-10">
               <ReservationCard
                 count={reservationCount}
                 images={reservationImages}
               />
             </div>
-            <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-8 right-2 sm:right-3 md:right-4 lg:right-2">
-              <p className="text-title font-semibold text-xs md:text-sm text-right leading-7 sm:leading-8  max-w-[250px] ">
-                فرار از شلوغی شهر و تجربه‌ی اقامتی اصیل در دل طبیعت شمال{" "}
+
+            <div className="absolute bottom-[25%]  hidden lg:block lg:bottom-[27%] xl:bottom-[21%] -right-[1%]z-10">
+              <p className="text-title font-semibold  max-w-40 text-wrap md:text-sm text-right leading-7 sm:leading-8 lg:max-w-[200px]  xl:max-w-[250px]">
+                فرار از شلوغی شهر و تجربه‌ی اقامتی اصیل در دل طبیعت شمال
               </p>
             </div>
           </div>

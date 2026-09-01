@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({
   socialLinks,
 }) => {
   return (
-    <footer className="w-full py-4 md:py-6 bg-background">
+    <footer className="w-full pb-4 md:pb-6 bg-background" >
       <div className="container-custom">
         {/* ===== فوتر اصلی ===== */}
         <div className="w-full bg-[#FCFDFD] border border-[#EEF3F7] shadow-[0px_0px_0px_6px_#FFFFFF] rounded-[20px] overflow-hidden">

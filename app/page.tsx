@@ -7,8 +7,9 @@ import { VideoSection } from "@/components/organisms/VideoSection";
 import { TestimonialsSection } from "@/components/organisms/TestimonialsSection";
 import { ArticlesSection } from "@/components/organisms/ArticlesSection";
 import { FAQSection } from "@/components/organisms/FAQSection";
-
-
+import { Footer } from "@/components/organisms/Footer";
+import { ICONS } from "@/components/icons/Icons";
+// import { Instagram, Telegram, Facebook } from "lucide-react";
 
 // ===== گرفتن دیتا از API سمت سرور (SSR) =====
 async function getHeroData() {
@@ -22,6 +23,45 @@ async function getHeroData() {
     buttonText: "مهمان گلیمار شو",
   };
 }
+
+const footerData = {
+  description: `اقامتگاه بوم‌گردی گیلمار، بزرگ‌ترین مجموعه اکولوژ شمال کشور با امکانات رفاهی و تفریحی متنوع، در فضایی منحصربه‌فرد و با مجوز رسمی میراث فرهنگی گیلان فعالیت می‌کند.`,
+  exploreLinks: [
+    { label: "سوئیت‌ها و اقامت", href: "/suites" },
+    { label: "راهنمای مهمان‌ها", href: "/guide" },
+    { label: "درباره گیلمار", href: "/about" },
+    { label: "مجله گیلمار", href: "/magazine" },
+  ],
+  contactInfo: {
+    phone: "۰۱۳۳۴۷۵۴۱ - ۰۱۳۳۴۷۵۴۲",
+    email: "info@Gilmar-Gilan.Com",
+    address:
+      "گیلان، جاده رشت به فومن، روستای مالمسرا، خیابان کوچه‌گران، اقامتگاه گیلمار",
+  },
+  mapImageSrc: "/images/Map image container.png",
+  socialLinks: [
+    {
+      icon: ICONS.twitter,
+      href: "https://twitter.com",
+      label: "واتساپ",
+    },
+    {
+      icon: ICONS.Telegram,
+      href: "https://Telegram.com",
+      label: "تلگرام",
+    },
+    {
+      icon: ICONS.linkedin,
+      href: "https://linkedin.org",
+      label: "لینکدین",
+    },
+    {
+      icon: ICONS.youtube,
+      href: "https://youtube.com",
+      label: "یوتیوب",
+    },
+  ],
+};
 
 const servicesData = [
   {
@@ -235,7 +275,7 @@ export default async function Home() {
         faqs={faqsData}
         imageSrc="/images/faq-image.png"
       />
-      <p className="mt-20">Hajnalkndlkadnkal</p>
+      <Footer {...footerData} />
     </div>
   );
 }

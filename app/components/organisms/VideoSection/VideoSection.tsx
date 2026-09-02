@@ -150,6 +150,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
                         ICONS.playCustom
                       )}
                     </div>
+                    
                   </button>
                 </div>
               )}

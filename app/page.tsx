@@ -235,7 +235,7 @@ export default async function Home() {
   const heroData = await getHeroData();
 
   return (
-    <div className="min-h-screen   ">
+    <div className="min-h-screen   " >
       <section className="relative overflow-hidden">
         <div
           className="absolute inset-0 -z-10"

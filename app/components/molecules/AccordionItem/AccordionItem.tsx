@@ -14,19 +14,19 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     <div
       className={`
   flex flex-col w-full max-w-[620px] mx-auto
-  bg-navbar-bg border border-navbar-border
-  transition-[max-height,padding,box-shadow]  duration-500 ease-in-out will-change-[border-radius]
+  bg-[#FCFDFD] border border-[#EEF3F7]
+  transition-[max-height,box-shadow,padding,border-radius] duration-500 ease-in-out
   overflow-hidden cursor-pointer
   ${
     isOpen
       ? "p-6 rounded-[20px] shadow-[0px_24px_48px_rgba(0,46,37,0.12),0px_0px_0px_6px_#FFFFFF] max-h-[500px]"
-      : "p-4 rounded-full shadow-[0px_0px_0px_6px_#FFFFFF] max-h-[64px]"
+      : "p-4 rounded-[50px] shadow-[0px_0px_0px_6px_#FFFFFF] max-h-[64px]"
   }
 `}
       onClick={() => onToggle?.(id)}
     >
       <div className="flex items-center justify-between w-full gap-3">
-        <h4 className=" text-xs sm:text-sm  leading-8 tracking-normal  text-right font-extrabold text-title text-center flex-1">
+        <h4 className="text-sm md:text-base font-extrabold leading-8 tracking-normal text-title text-right flex-1">
           {question}
         </h4>
 
@@ -51,7 +51,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           ${isOpen ? "max-h-[200px] opacity-100 mt-2" : "max-h-0 opacity-0"}
         `}
       >
-        <p className="text-[10px] sm:text-sm font-semibold text-description tracking-normal text-right leading-8 max-w-[588px] mx-auto">
+        <p className="text-xs md:text-sm font-semibold text-description text-right leading-8 max-w-[588px] mx-auto">
           {answer}
         </p>
       </div>

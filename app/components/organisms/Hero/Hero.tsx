@@ -35,20 +35,17 @@ export const Hero: React.FC<HeroProps> = ({
       <div className=" container-custom  py-12  lg:py-13">
         {/* محتوای متنی */}
         <div className="flex flex-col items-center lg:items-center text-center ">
-          {/* تایتل */}
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[40px] xl:tracking-[-2.4px] text-center xl:leading-[100%] font-extrabold text-title   max-w-4xl ">
             {title}
           </h1>
 
-          {/* توضیحات */}
           <p className="mt-4 sm:mt-2 text-xs md:text-sm lg:tracking-normal  text-description leading-5.5 lg:leading-8 max-w-3xl">
             {description}
           </p>
 
-          {/* دکمه */}
           <div className="mt-4 sm:mt-6">
             <Button
-              className="min-w-[150px] sm:min-w-[174px] lg:min-w-[191px] pl-2  !py-4 sm:pl-3 lg:pl-1.5 justify-center sm:justify-between text-xs sm:text-sm  xl:text-base font-semibold sm:font-bold lg:font-extrabold"
+              className="min-w-[130px] sm:min-w-[174px] lg:min-w-[191px] pl-2  !py-2 sm:pl-3 lg:pl-1.5 justify-center sm:justify-between text-xs sm:text-sm  xl:text-base font-semibold sm:font-bold lg:font-extrabold"
               rightIconName="arrowBack"
               size="sm"
               rightIconClassName="w-6.5 h-6.5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 icon-arrow-gradient rounded-full flex items-center justify-center"

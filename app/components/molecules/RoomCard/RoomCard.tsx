@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { RoomCardProps } from "./RoomCard.types";
 
+const truncateText = (text: string, maxLength: number) => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength) + "...";
+};
+
 export const RoomCard: React.FC<RoomCardProps> = ({
   id,
   title,
@@ -28,11 +33,11 @@ export const RoomCard: React.FC<RoomCardProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(7,7,8,0.72)] via-[rgba(7,7,8,0.2)] to-transparent z-0" />
 
         <div className="absolute bottom-0 right-0 z-10 p-2 md:p-4 text-right text-white">
-          <h3 className="text-sm font-extrabold md:text-base leading-8">
-            {title}
+          <h3 className="text-sm font-extrabold md:text-base leading-8 max-w-full">
+            {truncateText(title, 25)}
           </h3>
-          <p className="text-xs mt-2 md:text-sm font-semibold text-white/80">
-            {description} {price}
+          <p className="text-xs mt-2 md:text-sm font-semibold text-white/80 max-w-full">
+            {truncateText(description, 30)} {price}
           </p>
         </div>
       </div>

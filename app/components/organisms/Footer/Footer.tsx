@@ -24,8 +24,26 @@ export const Footer: React.FC<FooterProps> = ({
   socialLinks,
 }) => {
   return (
-    <footer className="w-full pb-4 md:pb-6 ">
+    <footer className=" relative w-full py-4 md:py-6 ">
+      <div
+        className="absolute bottom-0 right-0 w-full h-full -z-10"
+        style={{
+          background: "#C5D8FF",
+          filter: "blur(210px)",
+          maskImage: `
+      linear-gradient(to top, black 0%, transparent 80%),
+      linear-gradient(to left, black 0%, transparent 80%)
+    `,
+          maskComposite: "intersect",
+          WebkitMaskImage: `
+      linear-gradient(to top, black 0%, transparent 80%),
+      linear-gradient(to left, black 0%, transparent 80%)
+    `,
+          WebkitMaskComposite: "intersect",
+        }}
+      />
       <div className="container-custom">
+        {/* ===== فوتر اصلی ===== */}
         <div className="w-full bg-[#FCFDFD] border border-[#EEF3F7] shadow-[0px_0px_0px_6px_#FFFFFF] rounded-[20px] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
             <div className="py-6 md:py-8 lg:py-11.5 px-2 md:pr-4 lg:pr-6">

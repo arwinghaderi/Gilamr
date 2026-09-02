@@ -120,7 +120,7 @@ const roomsData = [
     title: "خانه‌ی چوبی گلیمار",
     description: "هر شب اقامت",
     price: "۱۳۰٬۰۰۰ تومان",
-    imageSrc: "/images/package3 2.png",
+    imageSrc: "/images/package2 2.png",
   },
   {
     id: "2",

@@ -76,7 +76,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               height: "64px",
               left: "8%",
               top: "15%",
-              backgroundImage: "url('/images/user.png')",
+              backgroundImage: "url('/images/user3.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -89,7 +89,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               height: "44px",
               left: "18%",
               top: "8%",
-              backgroundImage: "url('/images/user3.png')",
+              backgroundImage: "url('/images/user1.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -128,7 +128,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               height: "72px",
               right: "16%",
               bottom: "28%",
-              backgroundImage: "url('/images/user.png')",
+              backgroundImage: "url('/images/user3.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

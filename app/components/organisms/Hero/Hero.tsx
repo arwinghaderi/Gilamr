@@ -25,8 +25,8 @@ export const Hero: React.FC<HeroProps> = ({
   imageAlt = "Hero image",
   reservationCount = 120,
   reservationImages = [
-    "/images/Hero.png",
-    "/images/Hero.png",
+    "/images/user.png",
+    "/images/service1.jpg",
     "/images/Hero.png",
   ],
 }) => {

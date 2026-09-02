@@ -120,7 +120,7 @@ const roomsData = [
     title: "خانه‌ی چوبی گلیمار",
     description: "هر شب اقامت",
     price: "۱۳۰٬۰۰۰ تومان",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/package3 2.png",
   },
   {
     id: "2",
@@ -134,14 +134,14 @@ const roomsData = [
     title: "خانه‌ی چوبی گلیمار",
     description: "هر شب اقامت",
     price: "۱۳۰٬۰۰۰ تومان",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/package2.png",
   },
   {
     id: "4",
     title: "خانه‌ی چوبی کیلمار",
     description: "هر شب اقامت",
     price: "۱۳۰٬۰۰۰ تومان",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/Articles.png",
   },
 ];
 
@@ -151,21 +151,21 @@ const articlesData = [
     title: "لورم ایپسوم متن ساختگی",
     description:
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/Articles.png",
   },
   {
     id: "2",
     title: "لورم ایپسوم متن ساختگی",
     description:
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/Articles.png",
   },
   {
     id: "3",
     title: "لورم ایپسوم متن ساختگی",
     description:
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    imageSrc: "/images/Hero.png",
+    imageSrc: "/images/Articles.png",
   },
 ];
 
@@ -235,7 +235,7 @@ export default async function Home() {
   const heroData = await getHeroData();
 
   return (
-    <div className="min-h-screen   " >
+    <div className="min-h-screen   ">
       <section className="relative overflow-hidden">
         <div
           className="absolute inset-0 -z-10"
@@ -330,8 +330,8 @@ export default async function Home() {
         buttonText="همین حالا رزرو کن"
         sliderImages={[
           "/images/package3 2.png",
-          "/images/package3 2.png",
-          "/images/package3 2.png",
+          "/images/Forest.png",
+          "/images/package2.png",
         ]}
         sliderTitle={`تجربه‌ی اقامتی اصیل در دل طبیعت شمال`}
       />

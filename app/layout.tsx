@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { abarFaNum } from "@/lib/fonts";
 import ThemeProvider from "@/providers/ThemeProvider";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/images/Logo.png",
+  },
+};
 
 export default function RootLayout({
   children,

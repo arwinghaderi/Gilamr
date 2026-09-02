@@ -24,12 +24,10 @@ export const Footer: React.FC<FooterProps> = ({
   socialLinks,
 }) => {
   return (
-    <footer className="w-full pb-4 md:pb-6 bg-background">
+    <footer className="w-full pb-4 md:pb-6 ">
       <div className="container-custom">
-        {/* ===== فوتر اصلی ===== */}
         <div className="w-full bg-[#FCFDFD] border border-[#EEF3F7] shadow-[0px_0px_0px_6px_#FFFFFF] rounded-[20px] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
-            {/* ===== بخش ۱: لوگو و توضیحات ===== */}
             <div className="py-6 md:py-8 lg:py-11.5 px-2 md:pr-4 lg:pr-6">
               <Logo size="md" />
               <p className="mt-2 text-sm font-semibold text-description leading-8 max-w-[314px] tracking-normal text-justify">
@@ -37,7 +35,6 @@ export const Footer: React.FC<FooterProps> = ({
               </p>
             </div>
 
-            {/* ===== بخش ۲: کاوش در گیلمار ===== */}
             <div className="py-6 md:py-8 lg:py-11.5 pr-2 md:pr-4 lg:pr-15">
               <h4 className="text-base font-extrabold text-title leading-[29px] mb-3">
                 کاوش در گیلمار

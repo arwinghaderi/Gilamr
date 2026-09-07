@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { abarFaNum } from "@/lib/fonts";
 import ThemeProvider from "@/providers/ThemeProvider";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   icons: {
@@ -21,6 +22,7 @@ export default function RootLayout({
       dir="rtl"
       suppressHydrationWarning
     >
+      <Analytics />
       <body className="min-h-full flex flex-col">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
